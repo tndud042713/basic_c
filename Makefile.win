@@ -1,0 +1,85 @@
+# Project: AA
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o "정수형\ 변수\ 출력1.o" "정수형\ 변수\ 출력2.o" "정수형\ 변수\ 출력3.o" "정수형\ 변수\ 출력4.o" "실수형\ 변수\ 출력1.o" "실수형\ 변수\ 출력2.o" "실수형\ 변수\ 출력3.o" "실수형\ 변수\ 출력4.o" "문자형\ 변수\ 출력1.o" "문자형\ 변수\ 출력4.o" "문자형\ 변수\ 출력2.o" "문자형\ 변수\ 출력3.o" "키보드를\ 통한\ 변수값\ 입력1.o" "키보드를\ 통한\ 변수값\ 입력2.o" "키보드를\ 통한\ 변수값\ 입력3.o" "나머지\ 연산자와\ 증감연산자3.o" "나머지\ 연산자와\ 증감연산자2.o" "나머지\ 연산자와\ 증감연산자4.o" "나머지\ 연산자와\ 증감연산자1.o"
+LINKOBJ  = main.o "정수형 변수 출력1.o" "정수형 변수 출력2.o" "정수형 변수 출력3.o" "정수형 변수 출력4.o" "실수형 변수 출력1.o" "실수형 변수 출력2.o" "실수형 변수 출력3.o" "실수형 변수 출력4.o" "문자형 변수 출력1.o" "문자형 변수 출력4.o" "문자형 변수 출력2.o" "문자형 변수 출력3.o" "키보드를 통한 변수값 입력1.o" "키보드를 통한 변수값 입력2.o" "키보드를 통한 변수값 입력3.o" "나머지 연산자와 증감연산자3.o" "나머지 연산자와 증감연산자2.o" "나머지 연산자와 증감연산자4.o" "나머지 연산자와 증감연산자1.o"
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = AA.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+"정수형\ 변수\ 출력1.o": 정수형\ 변수\ 출력1.cpp
+	$(CPP) -c "정수형 변수 출력1.cpp" -o "정수형 변수 출력1.o" $(CXXFLAGS)
+
+"정수형\ 변수\ 출력2.o": 정수형\ 변수\ 출력2.cpp
+	$(CPP) -c "정수형 변수 출력2.cpp" -o "정수형 변수 출력2.o" $(CXXFLAGS)
+
+"정수형\ 변수\ 출력3.o": 정수형\ 변수\ 출력3.cpp
+	$(CPP) -c "정수형 변수 출력3.cpp" -o "정수형 변수 출력3.o" $(CXXFLAGS)
+
+"정수형\ 변수\ 출력4.o": 정수형\ 변수\ 출력4.cpp
+	$(CPP) -c "정수형 변수 출력4.cpp" -o "정수형 변수 출력4.o" $(CXXFLAGS)
+
+"실수형\ 변수\ 출력1.o": 실수형\ 변수\ 출력1.cpp
+	$(CPP) -c "실수형 변수 출력1.cpp" -o "실수형 변수 출력1.o" $(CXXFLAGS)
+
+"실수형\ 변수\ 출력2.o": 실수형\ 변수\ 출력2.cpp
+	$(CPP) -c "실수형 변수 출력2.cpp" -o "실수형 변수 출력2.o" $(CXXFLAGS)
+
+"실수형\ 변수\ 출력3.o": 실수형\ 변수\ 출력3.cpp
+	$(CPP) -c "실수형 변수 출력3.cpp" -o "실수형 변수 출력3.o" $(CXXFLAGS)
+
+"실수형\ 변수\ 출력4.o": 실수형\ 변수\ 출력4.cpp
+	$(CPP) -c "실수형 변수 출력4.cpp" -o "실수형 변수 출력4.o" $(CXXFLAGS)
+
+"문자형\ 변수\ 출력1.o": 문자형\ 변수\ 출력1.cpp
+	$(CPP) -c "문자형 변수 출력1.cpp" -o "문자형 변수 출력1.o" $(CXXFLAGS)
+
+"문자형\ 변수\ 출력4.o": 문자형\ 변수\ 출력4.cpp
+	$(CPP) -c "문자형 변수 출력4.cpp" -o "문자형 변수 출력4.o" $(CXXFLAGS)
+
+"문자형\ 변수\ 출력2.o": 문자형\ 변수\ 출력2.cpp
+	$(CPP) -c "문자형 변수 출력2.cpp" -o "문자형 변수 출력2.o" $(CXXFLAGS)
+
+"문자형\ 변수\ 출력3.o": 문자형\ 변수\ 출력3.cpp
+	$(CPP) -c "문자형 변수 출력3.cpp" -o "문자형 변수 출력3.o" $(CXXFLAGS)
+
+"키보드를\ 통한\ 변수값\ 입력1.o": 키보드를\ 통한\ 변수값\ 입력1.cpp
+	$(CPP) -c "키보드를 통한 변수값 입력1.cpp" -o "키보드를 통한 변수값 입력1.o" $(CXXFLAGS)
+
+"키보드를\ 통한\ 변수값\ 입력2.o": 키보드를\ 통한\ 변수값\ 입력2.cpp
+	$(CPP) -c "키보드를 통한 변수값 입력2.cpp" -o "키보드를 통한 변수값 입력2.o" $(CXXFLAGS)
+
+"키보드를\ 통한\ 변수값\ 입력3.o": 키보드를\ 통한\ 변수값\ 입력3.cpp
+	$(CPP) -c "키보드를 통한 변수값 입력3.cpp" -o "키보드를 통한 변수값 입력3.o" $(CXXFLAGS)
+
+"나머지\ 연산자와\ 증감연산자3.o": 나머지\ 연산자와\ 증감연산자3.cpp
+	$(CPP) -c "나머지 연산자와 증감연산자3.cpp" -o "나머지 연산자와 증감연산자3.o" $(CXXFLAGS)
+
+"나머지\ 연산자와\ 증감연산자2.o": 나머지\ 연산자와\ 증감연산자2.cpp
+	$(CPP) -c "나머지 연산자와 증감연산자2.cpp" -o "나머지 연산자와 증감연산자2.o" $(CXXFLAGS)
+
+"나머지\ 연산자와\ 증감연산자4.o": 나머지\ 연산자와\ 증감연산자4.cpp
+	$(CPP) -c "나머지 연산자와 증감연산자4.cpp" -o "나머지 연산자와 증감연산자4.o" $(CXXFLAGS)
+
+"나머지\ 연산자와\ 증감연산자1.o": 나머지\ 연산자와\ 증감연산자1.cpp
+	$(CPP) -c "나머지 연산자와 증감연산자1.cpp" -o "나머지 연산자와 증감연산자1.o" $(CXXFLAGS)
